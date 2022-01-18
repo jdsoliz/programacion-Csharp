@@ -12,6 +12,35 @@ namespace Formacion.CSharp.ConsoleApp2
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+
+            Alumno[] alumnos =
+            {
+                new Alumno() {Nombre = "Julian", Apellidos = "Sanchez", Edad = 24},
+                new Alumno() { Nombre = "Borja", Apellidos = "Cabeza", Edad = 24 },
+                new Alumno() { Nombre = "Carlos", Apellidos = "Sanz", Edad = 24 }
+            };
+
+            //For es un contador
+            for(int i = 0; i < alumnos.Length; i++)
+            {
+                Console.WriteLine($"Alumno {i}: {alumnos[i].Nombre} {alumnos[i].Apellidos}");
+            }
+
+            //Foreach recorre colecciones
+            foreach(var item in alumnos)
+            {
+                Console.WriteLine($"{item.Nombre}{item.Apellidos}");
+            }
+
+            bool testing = true;
+            int contador = 0;
+            while (testing)
+            {
+                Console.WriteLine($"while-Alumno {contador}: {alumnos[contador].Nombre} {alumnos[contador].Apellidos}");
+            }
+
+            ///////////////////////////////////////////////////////////////////
+
             //Variable de tipo referencia. Objeto definido con Class.
             var alumno = new Alumno() { Nombre = "Ana", Apellidos = "Sanz" };
 
