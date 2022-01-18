@@ -40,7 +40,9 @@ namespace EjerciciosCsharp.ConsoleApp2
 
         static void CalcularletraDNI()
         {
-            string[] letras = { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
+            var persona = new Persona("12345678", "Borja", "Cabeza");
+            Console.WriteLine($"DNI: {persona.DNI}");
+            //string[] letras = { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
         }
     }
 }
@@ -53,7 +55,23 @@ namespace EjerciciosCsharp.Models
         public string Nombre { get; set; }
         public string Apellidos { get; set; };
         public int Edad { get; set; };
-        public int DNI { get; set; };
-        Console.WriteLine("Es la hora del queso");
+        private int DNI;
+        public string DNI
+        {
+            //Calculamos el modulo(resto de la division), al dividir el dni entre 23
+            //el modulo indica la posicion del array, donde esta la letra del DNI.
+            string DNI Convert.ToInt16();
+
+            get { return DNI; }
+            set { DNI = value; }
+        }
+
+        public Persona()
+        {
+            this.DNI = null;
+            Nombre =  "";
+            Apellidos = "";
+            Edad =  0;
+        }
     }
 }
